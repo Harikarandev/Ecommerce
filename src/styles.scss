@@ -2,3 +2,124 @@
 
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+
+.height100{
+    height: 100%;
+}
+.width100{
+    width: 100%;
+}
+.login_wrapper{
+    background-color:rgb(252, 235, 0);
+    border-radius: 25px;
+    padding: 50px;
+}
+.login_form{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px;
+}
+.mat-form-field-infix {
+width: 240px !important;
+}
+.actionlinks p {
+    margin: 0px ;
+    font-size: 12px;
+    cursor: pointer;
+}
+.registration_wrapper{
+    background-color:rgb(243, 243, 243);
+}
+.registration_form{
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.heading{
+    background-color:rgb(252, 235, 0);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+// sidenavbar
+.sidenavbarlist{
+    width:260px;
+    background-color: rgb(252, 235, 0);
+    // opacity: .6;
+}
+.menuitem{
+    width:100%;
+    border:none;
+    padding: 17px;
+    
+}
+.menuitem::after{
+    border:none;
+}
+
+//main
+.main-wrapper{
+    background-color: #eee;
+    padding: 20px;
+}
+.margin20{
+ margin-left: 260px;   
+
+}
+.card{
+    width: 300px;
+    height: 180px;
+}
+.card1{
+    width: 250px;
+    height: 100px;
+}
+.cardGroup{
+    margin-top: 30px;
+}
+.data-wrapper{
+    background-color: white;
+     margin-top: 30px;
+padding: 20px;
+height: 300px;
+}
+.width50{
+    width: 50%;
+}
+.datachart{
+    width: 300px !important;
+    height: 300px !important;
+
+}
+.datatable{
+width: 50%;
+height: 100%;
+overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 5px;
+ display: none;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.toolbar{
+    background-color: white;
+    border-radius: 15px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.pointer{
+    cursor: pointer;
+}
