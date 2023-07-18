@@ -1,0 +1,29 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="login_wrapper" fxLayoutGap="250px" fxLayoutAlign="space-around center" [fxShow]="true">
+    <div fxLayout="column wrap" class="image" fxLayoutAlign="space-around center" [fxShow]="true"><img imgSrc="/Web/Login_logo.png" alt="login"></div>
+    <div fxLayout="column wrap" class="login_form" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h2>
+        LOGIN</h2>
+      <div fxLayout="row wrap" class="forminputs" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="true">
+          <input matInput [(ngModel)]="page.username" placeholder="Enter UserName" [required]="false">
+          <mat-label>Username</mat-label> <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" class="forminputs" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="true">
+          <input matInput [(ngModel)]="page.password" name="password" type="password" placeholder="Enter Password" [required]="false">
+          <mat-label>Password</mat-label> <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row wrap" style="margin-bottom:30px; display:flex" fxLayoutGap="90px" fxLayoutAlign="space-between start" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start center" [fxShow]="true"><span routerLink="forgetpassword" class="actionlinks">
+                <p>ForgetPassword?</p></span></div>
+        <div fxLayout="column wrap" fxLayoutAlign="end center" [fxShow]="true"><span routerLink="/registration" class="actionlinks">
+                <p>SIGN UP</p></span></div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="space-around center"><button mat-raised-button class="lgn_btn" color="accent" (click)="login()">LOGIN</button></div>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><router-outlet></router-outlet></div>
+  </div>
+</div>

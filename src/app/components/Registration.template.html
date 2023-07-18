@@ -1,0 +1,74 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div class="heading">
+          Registration</div>
+      </div>
+      <form [formGroup]="page.registrationform" class="registration_form" (ngSubmit)="userreg()">
+        <div fxLayout="row wrap" fxLayoutGap="50px" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Enter Your First Name:</div>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput type="text" placeholder="FirstName" [required]="false" formControlName="firstName">
+              <mat-error align="start" *ngIf="page.registrationform.controls[&apos;firstName&apos;].invalid">Firstname is required</mat-error> <mat-hint align="end" *ngIf="page.registrationform.controls[&apos;firstName&apos;]">Alpha character is required</mat-hint>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Enter Your Last Name:</div>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="firstName" type="text" placeholder="LastName" [required]="false" formControlName="lastName">
+              <mat-error align="start" *ngIf="page.registrationform.controls[&apos;lastName&apos;].invalid">LastName is required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Enter Your Email Address:</div>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="Email" type="text" placeholder="Email" [required]="false" formControlName="email">
+              <mat-error align="start" *ngIf="page.registrationform.controls[&apos;firstName&apos;].invalid">Firstname is required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" class="width-100 gender" fxLayoutGap="10px" fxLayoutAlign="space-between center" [fxShow]="true">
+              <p>
+                Gender:</p>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-radio-button [value]="male" [required]="false" formControlName="gender" ngDefaultControl name="Male" [labelPosition]="&apos;after&apos;">Male</mat-radio-button></div>
+              <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-radio-button [value]="[&apos;female&apos;]" [required]="false" formControlName="gender" ngDefaultControl name="Female" [labelPosition]="&apos;after&apos;">Female</mat-radio-button></div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start start" [fxShow]="true">
+            <div>
+              Phone Number:</div>
+            <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="space-around center" [fxShow]="true">
+              <div fxLayout="column wrap" class="countrycode" fxLayoutAlign="space-around center" [fxShow]="true"><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-label>Code</mat-label>
+                  <mat-select formControlName="countrycode" [(value)]="page.selected" placeholder="Select" [required]="false">
+                    <mat-option [value]="&apos;+91&apos;" disabled="false">+91</mat-option><mat-option [value]="&apos;+72&apos;" disabled="false">+72</mat-option><mat-option [value]="&apos;+99&apos;" disabled="false">+99</mat-option>
+                  </mat-select>
+
+                </mat-form-field></div>
+              <div fxLayout="column wrap" fxLayoutAlign="space-around center" [fxShow]="true">
+                <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput name="PhoneNumber" type="text" placeholder="Phone Number" [required]="false" formControlName="phoneNumber">
+                  <mat-error align="start" *ngIf="page.registrationform.controls[&apos;firstName&apos;].invalid">Firstname is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="space-around center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button color="accent" (click)="userreg()" type="submit">Submit</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
